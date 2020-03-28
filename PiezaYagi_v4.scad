@@ -51,5 +51,5 @@ module cuerpo(){
     translate([(anchoBoom+2*anchoPared-anchoSlot)/2,-anchoTuerca-anchoPared,0])cube([anchoSlot,anchoTuerca+2*anchoPared,anchoBoom]);
   }
 }
-cuerpo();
-//mirror([1,0,0]) cuerpo();
+
+mirror([1,0,0]) cuerpo();
