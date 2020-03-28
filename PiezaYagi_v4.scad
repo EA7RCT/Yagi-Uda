@@ -28,6 +28,9 @@ module cuerpo(){
   
     translate([0,anchoBoom+anchoPared+anchoPieza/2-anchoSlot/2,0])
       cube([anchoBoom+2*anchoPared,anchoSlot,anchoBoom-anchoPieza/2]);
+    
+     translate([(anchoBoom+2*anchoPared-anchoSlot)/2,anchoBoom+anchoPared+anchoPieza/2-anchoSlot/2,anchoBoom-anchoPieza/2-radio])
+      cube([anchoSlot,anchoPieza,2*radio]);
   
     translate([(anchoBoom+2*anchoPared)/2, anchoBoom+anchoPared, (anchoBoom-anchoPieza/2-radio)/2])
       huecoM3();
@@ -48,5 +51,5 @@ module cuerpo(){
     translate([(anchoBoom+2*anchoPared-anchoSlot)/2,-anchoTuerca-anchoPared,0])cube([anchoSlot,anchoTuerca+2*anchoPared,anchoBoom]);
   }
 }
-
-mirror([1,0,0]) cuerpo();
+cuerpo();
+//mirror([1,0,0]) cuerpo();
