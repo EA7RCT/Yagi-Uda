@@ -85,13 +85,6 @@ module cuerpo(){
       rotate([270,0,0]) cylinder(h=anchoPieza,r=rTornillo,$fn=50);
     translate([anchoBoom/2 + anchoPared, anchoBoom+anchoPared+anchoPieza, 6])
       rotate([90,0,0]) cylinder(h=3.1,r=2.8+0.06,$fn=50);
-      
-    /*translate([anchoBoom-anchoPared, anchoBoom+anchoPared, 6])
-      huecoM3();
-    translate([anchoBoom-anchoPared, anchoBoom+anchoPared, 6])
-      rotate([270,0,0]) cylinder(h=anchoPieza,r=rTornillo,$fn=50);
-    translate([anchoBoom-anchoPared, anchoBoom+anchoPared+anchoPieza, 6])
-      rotate([90,0,0]) cylinder(h=3.1,r=2.8+0.06,$fn=50);*/
     
     translate([3*anchoPared, anchoBoom+anchoPared, altoPieza - 6])
       huecoM3();
@@ -118,11 +111,6 @@ module cuerpo(){
         cylinder(h=3.1,r=2.8 + 0.06,$fn=50);  
     translate([(anchoBoom+2*anchoPared-anchoSlot)/2,-anchoTuerca-anchoPared,0])cube([anchoSlot,anchoTuerca+2*anchoPared,altoPieza]);
   }
-  
- 
-  
-  
-  
 }
 
 mirror([1,0,0]) cuerpo();
